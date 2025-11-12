@@ -1,0 +1,453 @@
+body{
+    max-width:auto;
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* --- Header Styling --- */
+header {
+  width: 100%;
+  background: #0077cc;
+  position: sticky; /* stays on top */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: center; /* center nav links */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* space between links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-links li a:hover {
+  background: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+/* --- Hero section styling --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f9f9f9, #e6f0ff);
+  min-height: 100vh;
+}
+
+/* Name heading */
+.hero h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Subtitle */
+.hero p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* Nav text */
+.hero nav {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #0077cc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.hero nav:hover {
+  color: #005fa3;
+}
+
+/* --- Profile picture container --- */
+.picture {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+
+/* Profile image */
+.picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0077cc;
+  box-shadow: 0 0 25px rgba(0, 119, 204, 0.4);
+}
+
+/* Orbit ring around the image */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  border: 2px dashed #0077cc;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbit 6s linear infinite;
+  pointer-events: none; 
+}
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+}
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    display: inline-flex;
+    gap: 20px;
+}
+main{
+    width: 90%;
+    margin: 30px auto;
+}
+/* --- About Me section --- */
+#About {
+  background: #f0f8ff; /* light, soothing background */
+  padding: 80px 20px;
+  text-align: center; /* centers all text inside */
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for slight elevation */
+#About:hover {
+  transform: translateY(-5px);
+}
+
+/* Section heading */
+#About h3 {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Paragraph text */
+#About p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center; /* centers the paragraph text */
+}
+/* Skills section */
+#Skill {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.Allskills ul {
+  display: flex;
+  justify-content: center; /* centers all items */
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* space between boxes */
+}
+
+.box {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 15px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.box p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.web{
+    box-shadow: 0px 2px 2px blue;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#Projects {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;  /* centers the boxes horizontally */
+  align-items: flex-start;  /* aligns the top of boxes */
+  gap: 30px;                /* space between boxes */
+  flex-wrap: wrap;          /* allows them to wrap on small screens */
+  margin-top: 20px;
+}
+
+.project-box {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.project-box:hover {
+  transform: translateY(-5px);
+}
+
+.project-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.project-box h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-box p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+/* --- Contact Section --- */
+#Contact {
+  background: #f0f8ff;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Section heading */
+#Contact h3 {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+/* Paragraph text */
+#Contact p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+/* --- Contact Section --- */
+#Contact {
+  background: #f0f8ff;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Section heading */
+#Contact h3 {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+/* Paragraph text */
+#Contact p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Form styling - vertical layout */
+.contact-form {
+  display: flex;
+  flex-direction: column; /* vertical stack */
+  gap: 20px;
+}
+
+/* Inputs and textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 8px rgba(0,119,204,0.3);
+}
+
+/* Submit button */
+.contact-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #0077cc;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* CV download button - below form */
+.cv-download {
+  margin-top: 30px;
+}
+
+.cv-download button {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background: #00aaff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cv-download button:hover {
+  background: #0077cc;
+  transform: translateY(-2px);
+}
+
+/* Make CV button responsive */
+.cv-download a {
+  text-decoration: none;
+}
+
+/* --- Footer styling --- */
+footer {
+  background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Social links (horizontal icons) */
+footer .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+/* Social link images */
+footer .social-links img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects */
+footer .social-links img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 119, 204, 0.7);
+}
+
+/* Footer text info */
+.footer-info {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-info a {
+  color: #00aaff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-info a:hover {
+  color: #66ccff;
+}
